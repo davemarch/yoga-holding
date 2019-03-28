@@ -4,23 +4,80 @@
     font-family: 'Barlow Condensed'
 }
 
+body {
+    position: relative;
+    height: 100vh;
+}
+
 #holdingPageContainer {
+    position: relative;
     align-content: center;
-    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (orientation: landscape) {
+    #holdingPageContainer {
+        width: 30%;
+    }
+  }
+
+@media (min-width:900px){
+    #holdingPageContainer {
+        height: 70%;
+    }
 }
 
 #lunaYogaImg {
-    /* border: solid red 1px; */
     position: relative;
+    max-width: 100%;
+    max-height: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 #comingSoonText {
-    /* border: solid red 1px; */
     position: absolute;
+    width: 100%;
     z-index: 1;
-    bottom: 35%;
-    left: 55%;
-    
+    top: -70px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2em;
 }
+
+@media only screen and (orientation: landscape) {
+    #comingSoonText {
+        top: -30px;
+        font-size: 1.5em;
+    }
+  }
+
+@media (min-width:900px){
+    #comingSoonText {
+        font-size: 3em;
+    }
+}
+
+
+
+.fab, .fas{
+    position: relative;
+    color: black;
+    z-index: 2;
+    font-size: 3em;    
+    transition: ease 0.5s;
+    margin: 0 5px;
+}
+
+.fab:hover, .fas:hover {
+    color: #ff4e01;
+
+}
+
+#links {
+    margin-top: 10px;
+    text-align: center;
+}
+
